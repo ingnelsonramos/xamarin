@@ -13,6 +13,7 @@
 
         <ScrollView x:Name="scrooll" VerticalScrollBarVisibility="Always">
         
+            <StackLayout>
                 <!--AQUI TODO BIEN  -->
                 <!--Fotos de portadas: DE DESPLAZA HACIA LOS LADOS (AQUI PERFECTO)--> 
                 <CarouselView 
@@ -49,7 +50,9 @@
                       </StackLayout>
                     </DataTemplate>
                   </CollectionView.ItemTemplate>
-                </CollectionView>                
+                </CollectionView>      
+              
+            </StackLayout>
         
          </ScrollView>
 
