@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             xmlns:paginas="clr-namespace:Sidelivery.Views"
+             x:Class="Sidelivery.Views.HomeContent"
+             Icon="buscador.png" 
+             BackgroundColor="LightGray">
+
+    <ContentPage.Content >
+
+        <ScrollView x:Name="scrooll" VerticalScrollBarVisibility="Always">
+        
+                <!--AQUI TODO BIEN  -->
+                <!--Fotos de portadas: DE DESPLAZA HACIA LOS LADOS (AQUI PERFECTO)--> 
+                <CarouselView 
+                        ItemsSource="{Binding FotosDePortada}"
+                        HeightRequest="250"
+                        VerticalOptions="CenterAndExpand">
+                    <CarouselView.ItemTemplate>
+                        <DataTemplate>
+                            <StackLayout>
+                                <paginas:HomeFotoDePortadaView />
+                            </StackLayout>
+                        </DataTemplate>
+                    </CarouselView.ItemTemplate>
+                </CarouselView>
+                
+                <!--AQUI TODO BIEN  -->
+                <!--Filtros de paginas por hashtag: ESTE ES UN CollectionView CON UN Orientation = Horizontal, tiene un HeightRequest="150  -->
+                <paginas:FiltrosDeProductosPorHashtagView x:Name="hashtagsDePortadaView" />
+                
+                <!-- AQUI ABAJO ES DONDE ESTA EL PROBLEMA -->
+                <!-- Aqui es donde se general el problema, que al desplazar hacia arriba, solo se mueve el scroll del listview -->
+                <!-- Este CollectionView se encarga de mostrar un listado de productos, en donde la cantidad de elmentos puede variar -->
+                <CollectionView 
+                  ItemsSource="{Binding ProductosDestacados}"
+                  Margin="0,0,5,5"
+                  VerticalScrollBarVisibility="Never">
+                  <CollectionView.ItemsLayout>
+                    <GridItemsLayout Orientation="Vertical" Span="2"/>
+                  </CollectionView.ItemsLayout>
+                  <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                      <StackLayout>
+                         <!-- Aqui va la plantilla de queta item de la lista -->
+                      </StackLayout>
+                    </DataTemplate>
+                  </CollectionView.ItemTemplate>
+                </CollectionView>                
+        
+         </ScrollView>
+
+    </ContentPage.Content>
+
+</ContentPage>
