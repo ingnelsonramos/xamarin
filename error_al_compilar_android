@@ -1,8 +1,5 @@
 1>------ Operación Compilar iniciada: proyecto: Sidelivery.Android, configuración: Debug Any CPU ------
-1>C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Xamarin\Android\Xamarin.Android.Common.targets(598,3): warning XA0119: Using Fast Deployment and Android App Bundles at the same time is not recommended. Use Fast Deployment for Debug configurations and Android App Bundles for Release configurations.
-1>E:\Nube\Programacion\Xamarin\Sidelivery Versionado\13_ant\Sidelivery\Sidelivery.Android\MainActivity.cs(43,39,43,72): warning CS0618: 'FirebaseInstanceId.Token' está obsoleto: 'deprecated'
-1>E:\Nube\Programacion\Xamarin\Sidelivery Versionado\13_ant\Sidelivery\Sidelivery.Android\MainActivity.cs(27,32,27,35): warning CS0414: El campo 'MainActivity.TAG' está asignado pero su valor nunca se usa
-1>  Sidelivery.Android -> E:\Nube\Programacion\Xamarin\Sidelivery Versionado\13_ant\Sidelivery\Sidelivery.Android\bin\Debug\Sidelivery.Android.dll
+
 1>  No existe ningún medio para resolver el conflicto entre "mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" y "mscorlib, Version=2.0.5.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e". Se elegirá "mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" de manera arbitraria.
 1>R8 : warning : Resource 'META-INF/MANIFEST.MF' already exists.
 1>R8 : warning : Resource 'META-INF/MSFTSIG.SF' already exists.
