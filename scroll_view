@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             xmlns:paginas="clr-namespace:Sidelivery.Views"
+             x:Class="Sidelivery.Views.HomeContent"
+             Icon="buscador.png" 
+             BackgroundColor="LightGray">
+
+    <ContentPage.Content >
+
+        <ScrollView x:Name="scrooll" VerticalScrollBarVisibility="Always">
+
+            <StackLayout>
+
+                <!--Fotos de portadas -->
+                <CarouselView 
+                        ItemsSource="{Binding FotosDePortada}"
+                        HeightRequest="250"
+                        VerticalOptions="CenterAndExpand">
+                    <CarouselView.ItemTemplate>
+                        <DataTemplate>
+                            <StackLayout>
+                                <paginas:HomeFotoDePortadaView />
+                            </StackLayout>
+                        </DataTemplate>
+                    </CarouselView.ItemTemplate>
+                </CarouselView>
+
+                <!--Filtros de paginas por hashtag -->
+                <paginas:FiltrosDeProductosPorHashtagView x:Name="hashtagsDePortadaView" />
+
+                <!-- Productos destacados -->
+                <!-- EN ProductosDestacadosView Hhago uso de un CollectionView, y es alli en donde el scrool se activa solo para el control y no en forma general sobre toda la pagina -->
+                <paginas:ProductosDestacadosView x:Name="listaDeProductosDestacados" />
+
+            </StackLayout>
+
+        </ScrollView>
+
+    </ContentPage.Content>
+
+</ContentPage>
